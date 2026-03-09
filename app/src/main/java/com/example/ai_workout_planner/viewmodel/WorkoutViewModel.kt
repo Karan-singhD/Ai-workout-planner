@@ -1,10 +1,11 @@
-package com.example.aiworkoutplanner.viewmodel
+package com.example.ai_workout_planner.viewmodel
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
-import com.example.aiworkoutplanner.data.WorkoutEntry
-// stores workout entries
+import com.example.ai_workout_planner.data.WorkoutEntry
+
 class WorkoutViewModel : ViewModel() {
+
 
     val workoutEntries = mutableStateListOf<WorkoutEntry>()
 
@@ -14,15 +15,15 @@ class WorkoutViewModel : ViewModel() {
         reps: String,
         weight: String
     ) {
-        if (exerciseName.isNotBlank() && sets.isNotBlank() && reps.isNotBlank() && weight.isNotBlank()) {
-            workoutEntries.add(
-                WorkoutEntry(
-                    exerciseName = exerciseName,
-                    sets = sets,
-                    reps = reps,
-                    weight = weight
-                )
+        workoutEntries.add(
+            WorkoutEntry(
+                exerciseName = exerciseName,
+                sets = sets,
+                reps = reps,
+                weight = weight
             )
-        }
+        )
     }
+
+
 }

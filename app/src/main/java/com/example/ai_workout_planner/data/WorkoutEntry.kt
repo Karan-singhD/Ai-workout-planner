@@ -1,5 +1,5 @@
-package com.example.aiworkoutplanner.data
-// format for excersice entry
+package com.example.ai_workout_planner.data
+
 data class WorkoutEntry(
     val exerciseName: String,
     val sets: String,
