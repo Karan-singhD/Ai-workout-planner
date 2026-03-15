@@ -5,13 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [WorkoutEntity::class], version = 2)
+@Database(
+    entities = [WorkoutEntity::class, SessionEntity::class],
+    version = 4
+)
 abstract class WorkoutDatabase : RoomDatabase() {
 
     abstract fun workoutDao(): WorkoutDao
+    abstract fun sessionDao(): SessionDao
 
     companion object {
-
         @Volatile
         private var INSTANCE: WorkoutDatabase? = null
 
@@ -24,7 +27,6 @@ abstract class WorkoutDatabase : RoomDatabase() {
                 )
                     .fallbackToDestructiveMigration()
                     .build()
-
                 INSTANCE = instance
                 instance
             }
