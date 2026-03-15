@@ -12,6 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val workoutViewModel: WorkoutViewModel = viewModel()
+
             WorkoutScreen(viewModel = workoutViewModel)
         }
     }
