@@ -127,6 +127,7 @@ class WorkoutViewModel(application: Application) : AndroidViewModel(application)
         isGenerating = true
         generatedPlan = ""
         generationError = ""
+// This gives the Ai api strict instructions on what to do
 
         val prompt = """
             Create a detailed $daysPerWeek-day per week workout plan for a $experience level person.
@@ -144,7 +145,7 @@ class WorkoutViewModel(application: Application) : AndroidViewModel(application)
             Keep it practical. Include rest days if needed. 
             Always use the exact format above for each exercise line.
         """.trimIndent()
-
+// this section launches the model
         viewModelScope.launch {
             try {
                 val response = gemini.generateContent(prompt)

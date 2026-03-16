@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import com.example.ai_workout_planner.ui.MainScreen
 import com.example.ai_workout_planner.ui.theme.AiworkoutplannerTheme
 import com.example.ai_workout_planner.viewmodel.WorkoutViewModel
-
+// initiates setup of the app
 class MainActivity : ComponentActivity() {
 
     private val viewModel: WorkoutViewModel by viewModels()
