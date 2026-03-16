@@ -8,7 +8,7 @@ import androidx.room.Update
 
 @Dao
 interface WorkoutDao {
-
+// workout functions
     @Insert
     suspend fun insertWorkout(workout: WorkoutEntity)
 

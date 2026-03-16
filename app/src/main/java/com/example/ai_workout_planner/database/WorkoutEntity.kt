@@ -2,7 +2,7 @@ package com.example.ai_workout_planner.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-
+// exercise details 
 @Entity(tableName = "workouts")
 data class WorkoutEntity(
     @PrimaryKey(autoGenerate = true)
