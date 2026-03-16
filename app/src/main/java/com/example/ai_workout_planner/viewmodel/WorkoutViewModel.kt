@@ -12,7 +12,7 @@ import com.example.ai_workout_planner.database.WorkoutDatabase
 import com.example.ai_workout_planner.database.WorkoutEntity
 import com.google.ai.client.generativeai.GenerativeModel
 import kotlinx.coroutines.launch
-
+import com.example.ai_workout_planner.BuildConfig
 class WorkoutViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = WorkoutRepository(
@@ -44,7 +44,7 @@ class WorkoutViewModel(application: Application) : AndroidViewModel(application)
 
     private val gemini = GenerativeModel(
         modelName = "gemini-2.5-flash",
-        apiKey = "AIzaSyB-9ZNlN2YwnAwkl3fE11846ZWTz6nQpKM"
+        apiKey = BuildConfig.GEMINI_API_KEY
     )
 
     init { loadSessions() }
